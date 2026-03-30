@@ -1,9 +1,0 @@
-Atividade prática (fazer em casa)
-
-Receber 2 números e devolver: 
-- Soma do primeiro com o segundo, 
-- Subtração do primeiro pelo segundo, 
-- Divisão do primeiro pelo segundo, 
-- Multiplicação do primeiro pelo segundo, 
-- Potência do primeiro com base no segundo e 
-- raiz do primeiro com base no segundo. 
