@@ -1,5 +1,5 @@
 <?php
- 
+ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
     <?php
         // echo 'Ola mundo';
 
-        echo '<form action="index2.php" method="post" accept-charset="ISO-8859-1">'.
+        echo '<form action="index.php" method="post">'.
              '<input type="text" name="nome" id="" placeholder="Digite o seu nome" require>'.
              '<input type="submit" value="ENVIAR">'.
              '</form>';
@@ -34,15 +34,17 @@
         echo '<p>O POST NÃO EXISTE</p>';
        }
 
-       // TAMANHO DA REQUISIÇÃO CONTENT_LENGTH
-       if(isset($_SERVER['CONTENT_LENGTH'])){
-        echo 'Tamanho requisição:'.$_SERVER['CONTENT_LENGTH'];
-       }
+        if(!isset($_SESSION['nomes'])){
+            $_SESSION['nomes']=[];
+        } if (isset($_POST['nome'])) {
+            $_SESSION['nomes'][] = $_POST['nome'];
+        }
 
         // SAÍDA DAS VARIÁVEIS GLOBLAIS     
         echo '<pre>';
-        print_r ($_SERVER);
         print_r ($_POST);
+        print_r($_SESSION);
+        print_r ($_SERVER);
         echo '</pre>';
     ?>
 </body>
