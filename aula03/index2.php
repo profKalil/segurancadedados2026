@@ -34,7 +34,7 @@
         echo '<p>O POST NÃO EXISTE</p>';
        }
 
-       // TAMANHO DA REQUISIÇÃO CONTENT_LENGHT
+       // TAMANHO DA REQUISIÇÃO CONTENT_LENGTH
        if(isset($_SERVER['CONTENT_LENGTH'])){
         echo 'Tamanho requisição:'.$_SERVER['CONTENT_LENGTH'];
        }
